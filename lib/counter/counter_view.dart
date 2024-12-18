@@ -9,7 +9,12 @@ class CounterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(body: BlocBuilder<CounterCubit, int>(
       builder: (context, state) {
-        return Center(child: Text(state.toString()));
+        return Center(
+          child: Text(
+            state.toString(),
+            style: const TextStyle(fontSize: 50),
+          ),
+        );
       },
     ));
   }
