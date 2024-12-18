@@ -21,14 +21,14 @@ class CounterView extends StatelessWidget {
       floatingActionButton: Column(
         children: [
           FloatingActionButton(
-            onPressed: () {},
+            onPressed: () => context.read<CounterCubit>().increment(),
             child: Icon(Icons.add),
           ),
           const SizedBox(
             height: 10,
           ),
           FloatingActionButton(
-            onPressed: () {},
+            onPressed: () => context.read<CounterCubit>().increment(),
             child: Icon(Icons.remove),
           ),
         ],
