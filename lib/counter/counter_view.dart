@@ -19,7 +19,19 @@ class CounterView extends StatelessWidget {
         },
       ),
       floatingActionButton: Column(
-        children: [FloatingActionButton(onPressed: () {})],
+        children: [
+          FloatingActionButton(
+            onPressed: () {},
+            child: Icon(Icons.add),
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          FloatingActionButton(
+            onPressed: () {},
+            child: Icon(Icons.remove),
+          ),
+        ],
       ),
     );
   }
