@@ -7,15 +7,20 @@ class CounterView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: BlocBuilder<CounterCubit, int>(
-      builder: (context, state) {
-        return Center(
-          child: Text(
-            state.toString(),
-            style: const TextStyle(fontSize: 50),
-          ),
-        );
-      },
-    ));
+    return Scaffold(
+      body: BlocBuilder<CounterCubit, int>(
+        builder: (context, state) {
+          return Center(
+            child: Text(
+              state.toString(),
+              style: const TextStyle(fontSize: 50),
+            ),
+          );
+        },
+      ),
+      floatingActionButton: Column(
+        children: [FloatingActionButton(onPressed: () {})],
+      ),
+    );
   }
 }
